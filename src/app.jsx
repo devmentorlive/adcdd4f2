@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "./app.css";
+import "./styles.css";
 
 import Checkbox from "./checkbox";
 import RadioGroup from "./radio-group";

@@ -1,6 +1,6 @@
 import React from "react";
 import useSound from "use-sound";
-import popinout from "../popinout.wav";
+import popinout from "../sounds/popinout.wav";
 
 export default function Radio({ value, option, onChange }) {
   const [play] = useSound(popinout, {

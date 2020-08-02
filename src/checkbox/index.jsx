@@ -1,6 +1,6 @@
 import React from "react";
 import useSound from "use-sound";
-import popinout from "../popinout.wav";
+import popinout from "../sounds/popinout.wav";
 
 export default function Checkbox({ value = false, onChange, label }) {
   const [play] = useSound(popinout, {
