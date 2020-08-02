@@ -5,7 +5,7 @@
 
 html,
 body {
-  font-size: 16px;
+  font-size: 20px;
 }
 
 .radio-group {
@@ -50,8 +50,8 @@ body {
   position: absolute;
   z-index: 1;
   margin: 2px;
-  width: 0.76rem;
-  height: 0.76rem;
+  width: 0.8rem;
+  height: 0.8rem;
   background: var(--color-checked);
 
   transform: scale(0);
