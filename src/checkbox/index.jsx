@@ -1,6 +1,7 @@
 import React from "react";
 import useSound from "use-sound";
 import popinout from "../sounds/popinout.wav";
+import "./styles.css";
 
 export default function Checkbox({ value = false, onChange, label }) {
   const [play] = useSound(popinout, {
@@ -18,7 +19,7 @@ export default function Checkbox({ value = false, onChange, label }) {
           return onChange(!value);
         }}
       >
-        <div className={`indicator ${value ? "checked" : "unchecked"}`} />
+        <div className={`indicator ${value ? "checked" : ""}`} />
       </div>
       <span className="label">{label}</span>
     </div>
