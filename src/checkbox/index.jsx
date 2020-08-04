@@ -1,9 +1,10 @@
 import React from "react";
 import useSound from "use-sound";
-import popinout from "../sounds/popinout.wav";
+import sounds from "./sounds.wav";
+import "./styles.css";
 
-export default function Checkbox({ value = false, onChange, label }) {
-  const [play] = useSound(popinout, {
+export default function Checkbox({ checked, onChange, label }) {
+  const [play] = useSound(sounds, {
     sprite: {
       in: [500, 1000],
       out: [1500, 2000],
@@ -14,13 +15,13 @@ export default function Checkbox({ value = false, onChange, label }) {
       <div
         className="border"
         onClick={() => {
-          play({ id: value ? "in" : "out" });
-          return onChange(!value);
+          play({ id: checked ? "in" : "out" });
+          onChange(!checked);
         }}
       >
-        <div className={`indicator ${value ? "checked" : "unchecked"}`} />
+        <div className={`indicator ${checked ? "checked" : ""}`} />
       </div>
-      <span className="label">{label}</span>
+      <div className="label">{label}</div>
     </div>
   );
 }
